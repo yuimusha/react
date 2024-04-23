@@ -38,9 +38,13 @@ h1{
 }
 
 .aggregator{
-  text-align: center;
+  padding-left: 1rem;
   position: sticky;
   width: 30%;
   height: auto;
   background-color:#CCD5FF;
+}
+
+.aggregator-title, .song-count{
+  text-align: center;
 }

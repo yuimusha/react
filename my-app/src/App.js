@@ -122,8 +122,10 @@ function App() {
           </div>
         </div>
         <div className="aggregator">
-          <h2>My List</h2>
-          {songCount()}
+          <h2 className="aggregator-title">My List</h2>
+          <div className="song-count">
+            {songCount()}
+          </div>
           {showMyList()}
         </div> 
       </div>

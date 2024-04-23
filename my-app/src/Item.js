@@ -1,10 +1,16 @@
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { useState } from "react";
 import './Item.css';
 
 export default function Item(props){
+    const [buttonText, setButtonText] = useState('Add To My List');
+    const [isClicked, setIsClicked] = useState(false);
+
     const handleClick = () => {
         props.add(props.item.name);
+        setButtonText('In My List');
+        if(!isClicked) setIsClicked(true);
     };
     const theme = createTheme({
         palette: {
@@ -31,7 +37,7 @@ export default function Item(props){
                 </div>
                 <div className="button-container">
                     <ThemeProvider theme={theme}>
-                        <Button variant="contained" color="primary" onClick={handleClick}>Add to My List</Button>
+                        <Button variant="contained" color="primary" onClick={handleClick} disabled = {isClicked}>{buttonText}</Button>
                     </ThemeProvider>
                 </div>
             </div>
