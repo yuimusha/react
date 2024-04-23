@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from "react";
 import itemData from "./item-data.json";
 import Item from "./Item.js";
+import MySong from "./MySong.js";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
@@ -40,9 +41,10 @@ function App() {
     return jsxlist;
   }
 
-  const addToList = (name) => {
+  const addToList = (name, artist, image) => {
     setNum(num+1);
-    setMySong([...song, name])
+    setMySong([...song, [name, artist, image]])
+    console.log("song")
   }
 
   const songCount = () => {
@@ -58,8 +60,11 @@ function App() {
   }
 
   const showMyList = () => {
-    const jsxlist = song.map((item, index) => (
+    /*const jsxlist = song.map((item, index) => (
       <p key={index} >{item}</p>
+    ))*/
+    const jsxlist = song.map((item) => (
+      <MySong name={item[0]} artist={item[1]} image={item[2]}/>
     ))
     return jsxlist;
   }
@@ -73,17 +78,20 @@ function App() {
           main: '#C884A6',
         }
     },
+    typography: {
+      "fontFamily": 'Times New Roman, Serif',
+    },
   });
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>React App</h1>
+        <h1>Music App</h1>
       </header>
       <div className="main">
         <div className="main-section">
           <div className="filter-section">
-            <h4>Filter songs by genre:</h4>
+            <h3>Filter songs by genre:</h3>
             <div className="filter-buttons">
               <ThemeProvider theme={theme}>
                 <Button variant="contained" color="primary" onClick={() => filterDataGenre("Pop")} size="small">Pop</Button>
@@ -91,7 +99,7 @@ function App() {
                 <Button variant="contained" color="primary" onClick={() => filterDataGenre("Classical")} size="small">Classical</Button>
               </ThemeProvider>
             </div>
-            <h4>Filter songs by artist:</h4>
+            <h3>Filter songs by artist:</h3>
             <div className="filter-buttons">
               <ThemeProvider theme={theme}>
                 <Button variant="contained" color="primary" onClick={() => filterDataArtist("James Arthur")}>James Arthur</Button>
@@ -109,7 +117,7 @@ function App() {
               </ThemeProvider>
             </div>
             <ThemeProvider theme={theme}>
-              <h4>Sort songs by: <Button variant="contained" color="primary" onClick={() => sortByLength()}>Length</Button></h4>
+              <h3>Sort songs by: <Button variant="contained" color="primary" onClick={() => sortByLength()}>Length</Button></h3>
             </ThemeProvider>
             <div className="clear-section">
               <ThemeProvider theme={theme}>
@@ -126,7 +134,9 @@ function App() {
           <div className="song-count">
             {songCount()}
           </div>
-          {showMyList()}
+          <div className="my-content">
+            {showMyList()}
+          </div>
         </div> 
       </div>
     </div>

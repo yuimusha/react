@@ -1,13 +1,18 @@
 
-h1{
+h1, h2, h3, h4, p{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+.App{
+  padding: 0;
+  margin: 0;
+  background-color:#e7bbe38c;
+}
 .App-header {
   height: 10vh;
   font-size: calc(10px + 2vmin);
   text-align: center;
   color: black;
+  background-color: #C884A6;
 }
 
 .main{
@@ -36,13 +41,21 @@ h1{
   flex-wrap: wrap;
   gap: 3rem;
 }
+.my-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
 
 .aggregator{
-  padding-left: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: sticky;
   width: 30%;
   height: auto;
   background-color:#CCD5FF;
+  border-radius: 25px;
 }
 
 .aggregator-title, .song-count{

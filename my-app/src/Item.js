@@ -8,7 +8,7 @@ export default function Item(props){
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
-        props.add(props.item.name);
+        props.add(props.item.name, props.item.artist, props.item.image);
         setButtonText('In My List');
         if(!isClicked) setIsClicked(true);
     };
@@ -21,7 +21,7 @@ export default function Item(props){
     });
     return (
         <div className="item-card">
-            <img src={props.item.image} />
+            <img className="item-img" src={props.item.image} />
             <div className="identity">
                 <p className="title">{props.item.name}</p>
                 <p className="artist">{props.item.artist}</p>
