@@ -5,17 +5,26 @@ import './Item.css';
 
 export default function Item(props){
     const [buttonText, setButtonText] = useState('Add To My List');
-    const [isClicked, setIsClicked] = useState(false);
-
+    const [color, setColor] = useState("primary");
+    
     const handleClick = () => {
         props.add(props.item.name, props.item.artist, props.item.image);
-        setButtonText('In My List');
-        if(!isClicked) setIsClicked(true);
+        if (buttonText == 'Remove from My List'){
+            setButtonText('Add To My List');
+            setColor("primary");
+        } else {
+            setButtonText('Remove from My List');
+            setColor("secondary");
+        }
     };
+
     const theme = createTheme({
         palette: {
             primary: {
                 main: '#23C9FF',
+            },
+            secondary: {
+                main: '#C884A6',
             }
         },
     });
@@ -37,7 +46,7 @@ export default function Item(props){
                 </div>
                 <div className="button-container">
                     <ThemeProvider theme={theme}>
-                        <Button variant="contained" color="primary" onClick={handleClick} disabled = {isClicked}>{buttonText}</Button>
+                        <Button variant="contained" color={color} onClick={handleClick}>{buttonText}</Button>
                     </ThemeProvider>
                 </div>
             </div>

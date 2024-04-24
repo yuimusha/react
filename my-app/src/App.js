@@ -11,6 +11,7 @@ function App() {
   const [data, setData] = useState(itemData);
   const [num, setNum] = useState(0);
   const [song, setMySong] = useState([]);
+  const [isAdded, setIsAdded] = useState({});
 
   const loadData = () => {
     setData(itemData);
@@ -42,11 +43,18 @@ function App() {
   }
 
   const addToList = (name, artist, image) => {
-    setNum(num+1);
-    setMySong([...song, [name, artist, image]])
-    console.log("song")
+    if (isAdded[name]){
+      const newSongList = song.filter((item) => item[0] != name);
+      setNum(num-1);
+      setMySong(newSongList);
+    } else {
+      setNum(num+1);
+      setMySong([...song, [name, artist, image]]);
+    }
+    setIsAdded(prevState => ({...prevState, [name]: !prevState[name]
+    }));
   }
-
+  
   const songCount = () => {
     if (song.length == 0){
       return <p>No song in My List</p>
