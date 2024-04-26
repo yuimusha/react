@@ -1,0 +1,99 @@
+[
+    {
+        "image": "images/james-arthur.jpg",
+        "name": "Can I Be Him",
+        "artist": "James Arthur",
+        "genre": "Pop",
+        "length": "4:06",
+        "length-calc": 4.06
+    },
+    {
+        "image": "images/cruel-summer.jpg",
+        "name": "Cruel Summer",
+        "artist": "Taylor Swift",
+        "genre": "Pop",
+        "length": "3:43",
+        "length-calc": 3.43
+    },
+    {
+        "image": "images/drivers-license.jpg",
+        "name": "Drivers License",
+        "artist": "Olivia Rodrigo",
+        "genre": "Pop",
+        "length": "4:01", 
+        "length-calc": 4.01
+    },
+    {
+        "image": "images/carmen-fantasy.jpg",
+        "name": "Carmen Fantasy, Op.25: I.Moderato",
+        "artist": "Pablo de Sarasate",
+        "genre": "Classical",
+        "length": "3:14",
+        "length-calc": 3.14
+    },
+    {
+        "image": "images/blue-moon.jpg",
+        "name": "Blue Moon",
+        "artist": "Billie Holiday",
+        "genre": "Jazz",
+        "length": "3:27",
+        "length-calc": 3.27
+    },
+    {
+        "image": "images/castle-park.jpg",
+        "name": "Castle Park",
+        "artist": "Julian Lage",
+        "genre": "Jazz",
+        "length": "3:57",
+        "length-calc": 3.57
+    },
+    {
+        "image": "images/solitary-seeker.jpg",
+        "name": "The Solitary Seeker",
+        "artist": "Melissa Aldana",
+        "genre": "Jazz",
+        "length": "6:07",
+        "length-calc": 6.07
+    },
+    {
+        "image": "images/paganini.jpg",
+        "name": "24 Caprices, Op.1: No.24 in A Minor",
+        "artist": "Niccolo Paganini",
+        "genre": "Classical",
+        "length": "4:28",
+        "length-calc": 4.28
+    },
+    {
+        "image": "images/rachmaninoff.jpg",
+        "name": "Variation No.23",
+        "artist": "Sergei Rachmaninoff",
+        "genre": "Classical",
+        "length": "6:31",
+        "length-calc": 6.31
+    },
+    {
+        "image": "images/ed-sheeran.jpg",
+        "name": "Thinking Out Loud",
+        "artist": "Ed Sheeran",
+        "genre": "Pop",
+        "length": "4:41",
+        "length-calc": 4.41
+    },
+    {
+        "image": "images/art-farmer.jpg",
+        "name": "Goodbye, Old Girl",
+        "artist": "Art Farmer",
+        "genre": "Jazz",
+        "length": "4:34",
+        "length-calc": 4.34
+    },
+    {
+        "image": "images/tchaikovsky.jpg",
+        "name": "Violin Concerto in D Major, Op.35",
+        "artist": "Pyotr Ilyich Tchaikovsky",
+        "genre": "Classical",
+        "length": "36:59",
+        "length-calc": 36.59
+    }
+  ]
+  
